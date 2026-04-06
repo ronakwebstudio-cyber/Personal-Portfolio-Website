@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --bg:      #0d1117;   /* main background */
+  --surface: #161b22;   /* cards, nav */
+  --text:    #e6edf3;   /* main text */
+  --muted:   #7d8590;   /* secondary text */
+  --accent:  #58a6ff;   /* links, highlights */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: Montserrat, sans-serif;
+    color: var(--text);
+}
+
+.logo {
+    width: 50px;
+}
+
+img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color: var(--surface);
+    padding: 0 24px;
+    height: 64px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: auto 16px;
+    
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hero-section {
+    margin: 24px;
+    padding: 16px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    color: var(--muted);
+}
+
+.about {
+    margin: 24px;
+}
+
+.projects {
+    margin: 24px;
+}
+
+.project-1, .project-2 {
+    margin: 16px;
+    background-color: var(--surface);
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid #30363d;
+}
+
+
+.contact {
+    margin: 24px;
+}
+
+.Contact-label {
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
