@@ -3,121 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta
+        name="description"
+        content="Ronak Pradhan is an aspiring full-stack web developer building clean, responsive websites and practical web experiences."
+    >
+    <meta name="theme-color" content="#07111f">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Personal Portfolio | Ronak Pradhan</title>
 </head>
 <body>
-    <header>
-        <nav class="nav-bar" role="navigation">
-            <div class="logo">
-                <a href="#home">
-                    <img src="./image/logo.png" alt="Ronak Pradhan portfolio logo" >
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="page-shell">
+        <header class="site-header">
+            <nav class="nav-bar" aria-label="Primary navigation">
+                <a class="logo" href="#home" aria-label="Ronak Pradhan home">
+                    <img src="./image/logo.png" alt="Ronak Pradhan portfolio logo">
+                    <span>Ronak Pradhan</span>
                 </a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>                    
-            </ul>  
-        </nav>
-    </header>
-    <main>
-        <section class="hero-section" id="home">
-            <h1 class="hero-name">Hi, I am Ronak Pradhan</h1>
-            <p class="hero-desc">I am an aspiring Full-Stack Web Developer who is passionate about
-                solving real life problems and building something for the
-                industry.
-            </p>
-            <div class="container">
-                <a href="#" class="btn btn-primary">Hire Me</a>
-                <a href="#" class="btn btn-ghost">Resume</a>
-            </div>
-        </section>
-        <section class="about-section" id="about">
-            <h2 class="subtitle">About Me</h2>
-            <p class="about-me-desc">I’m an aspiring Full-Stack Web Developer currently building my foundation in HTML and CSS.
-                 I recently completed my Class 12 education from St. Robert’s Higher Secondary School with
-                  Physics, Chemistry, and Mathematics as my core subjects.I enjoy creating clean,
-                  responsive web interfaces and continuously improving my skills through hands-on projects.
-                   My goal is to grow into a skilled developer capable of building complete, real-world web
-                   applications.</p>
-        </section>
-        <section class="skills" id="skills">
-            <h2 class="subtitle">Skills</h2>
-            <div class="skill-card">
-                <div class="card">
-                    <h3 class="sc-st">UI/UX Design</h3>
-                    <p class="sc-desc">Designing intuitive and user-friendly interfaces with a focus on simplicity and usability.
-                         I aim to create designs that not only look good but also provide a smooth user experience.</p>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="nav-panel">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a class="nav-cta" href="mailto:ronak.webstudio@gmail.com">Let's Work</a>
                 </div>
-                <div class="card">
-                    <h3 class="sc-st">HTML & CSS</h3>
-                    <p class="sc-desc">
-                        Building clean, responsive, and structured web interfaces using modern HTML and CSS. Focused on layout design,
-                         accessibility, and creating visually appealing user experiences.
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section class="hero-section section" id="home">
+                <div class="hero-copy">
+                    <p class="eyebrow">Aspiring Full-Stack Web Developer</p>
+                    <h1 class="hero-name">Building responsive websites that feel clear, modern, and easy to use.</h1>
+                    <p class="hero-desc">
+                        I am Ronak Pradhan, a developer in progress with a strong interest in practical UI design,
+                        frontend development, and turning ideas into polished web experiences.
                     </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+                    </div>
+
+                    <div class="hero-highlights" aria-label="Quick highlights">
+                        <article class="highlight-card">
+                            <span class="highlight-label">Focus</span>
+                            <strong>Clean UI and responsive layouts</strong>
+                        </article>
+                        <article class="highlight-card">
+                            <span class="highlight-label">Currently Learning</span>
+                            <strong>Frontend fundamentals and JavaScript</strong>
+                        </article>
+                        <article class="highlight-card">
+                            <span class="highlight-label">Goal</span>
+                            <strong>Build real-world full-stack products</strong>
+                        </article>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 class="sc-st">Coming Soon</h3>
-                    <p class="sc-desc">
-                        Currently expanding my skill set by learning new technologies and tools.
-                         More exciting projects and capabilities are on the way.
-                    </p>
+
+                <aside class="hero-panel" aria-label="Profile summary">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        Open to internships and freelance opportunities
+                    </div>
+                    <h2>What I bring</h2>
+                    <ul class="hero-points">
+                        <li>Thoughtful visual structure with a strong eye for clarity</li>
+                        <li>Responsive interfaces built with modern HTML, CSS, and JavaScript</li>
+                        <li>A learning mindset focused on steady improvement and real projects</li>
+                    </ul>
+
+                    <div class="mini-grid">
+                        <article class="mini-card">
+                            <span class="mini-label">Education</span>
+                            <strong>Class 12</strong>
+                            <p>Completed at St. Robert's Higher Secondary School.</p>
+                        </article>
+                        <article class="mini-card">
+                            <span class="mini-label">Strengths</span>
+                            <strong>UI, Layout, Consistency</strong>
+                            <p>Designing pages that stay readable and usable across devices.</p>
+                        </article>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="section about-section" id="about">
+                <div class="section-heading">
+                    <p class="eyebrow">About Me</p>
+                    <h2 class="section-title">I enjoy making the web feel simpler and more approachable.</h2>
                 </div>
-            </div>
-        </section>
-        <section class="projects" id="projects">
-            <h2 class="subtitle">My Projects</h2>
-            <div class="project-card">
-                <div class="project">
-                    <h3 class="project-title">E-commerce Website</h3>
-                    <p class="project-desc">
-                        Built a responsive e-commerce website using HTML and CSS, focusing on clean UI design,
-                         structured layouts, and product display components. Implemented modern styling techniques
-                         such as Flexbox and Grid to ensure a seamless user experience across devices.
-                    </p>
-                    <a href="https://ronakwebstudio-cyber.github.io/E-commerce-website/" class="project-link">View Project</a>
+
+                <div class="about-grid">
+                    <article class="surface-card about-card">
+                        <p class="about-me-desc">
+                            I am currently building my foundation in web development with a focus on strong structure,
+                            responsive styling, and user-friendly interfaces. My academic background in Physics,
+                            Chemistry, and Mathematics helped me develop discipline and problem-solving skills that now
+                            shape the way I approach coding.
+                        </p>
+                    </article>
+
+                    <article class="surface-card journey-card">
+                        <h3>What I'm working on</h3>
+                        <ul class="journey-list">
+                            <li>Improving frontend design quality with better spacing, hierarchy, and accessibility</li>
+                            <li>Practicing JavaScript through small interactive apps</li>
+                            <li>Growing toward complete full-stack project development</li>
+                        </ul>
+                    </article>
                 </div>
-                <div class="project">
-                    <h3 class="project-title">Weather App</h3>
-                    <p class="project-desc">
-                       Built a dynamic web application using HTML, CSS, and JavaScript, implementing core JavaScript
-                        concepts such as DOM manipulation, event listeners, and real-time updates to enhance user interaction.
-                    </p>
-                    <a href="#" class="project-link">View Project</a>
+            </section>
+
+            <section class="section skills-section" id="skills">
+                <div class="section-heading">
+                    <p class="eyebrow">Skills</p>
+                    <h2 class="section-title">A foundation built around usability, structure, and growth.</h2>
                 </div>
-                <div class="project">
-                    <h3 class="project-title">Todo App</h3>
-                    <p class="project-desc">
-                        Built a dynamic web application using HTML, CSS, and JavaScript, implementing core JavaScript
-                        concepts such as DOM manipulation, event listeners, and real-time updates to enhance user interaction.
-                    </p>
-                    <a href="#" class="project-link">View Project</a>
+
+                <div class="skill-card">
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h3 class="sc-st">UI/UX Thinking</h3>
+                        <p class="sc-desc">
+                            Designing simple, intuitive flows with attention to readability, spacing, and visual balance.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="sc-st">HTML, CSS, JavaScript</h3>
+                        <p class="sc-desc">
+                            Building responsive interfaces with semantic markup, flexible layouts, and interactive behavior.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3 class="sc-st">Continuous Learning</h3>
+                        <p class="sc-desc">
+                            Expanding into full-stack development by learning tools, workflows, and real project patterns.
+                        </p>
+                    </article>
                 </div>
-            </div>
-        </section>
-        <section class="contact" id="contact">
-            <h2 class="contact-title">Contact Info</h2>
-            <a href="mailto:ronak.webstudio@gmail.com" class="contact-info"  aria-label="Email">
-                <i class="fa-solid fa-envelope"></i></a>
-            <a href="tel:+919775426283" class="contact-info" aria-label="Phone number">
-                <i class="fa-solid fa-phone"></i>
-            </a>
-        </section>
-        <section class="cta-slogan">
-            <h2 class="slogan">Have a project ? Lets Talk</h2>
-        </section>
-    </main>
-    <footer class="footer">
-        <span class="footer-copy">&copy; All rights reserved.</span>
-    </footer>
-        <script src="script.js"></script>
-    </body>
-    </html>
+            </section>
+
+            <section class="section projects-section" id="projects">
+                <div class="section-heading">
+                    <p class="eyebrow">Projects</p>
+                    <h2 class="section-title">A few projects that reflect how I learn by building.</h2>
+                </div>
+
+                <div class="project-card">
+                    <article class="project">
+                        <div class="project-meta">
+                            <span>Responsive Layout</span>
+                            <span>HTML / CSS</span>
+                        </div>
+                        <h3 class="project-title">E-commerce Website</h3>
+                        <p class="project-desc">
+                            A storefront concept focused on visual hierarchy, product display, and responsive sections
+                            that work smoothly across screen sizes.
+                        </p>
+                        <a href="https://ronakwebstudio-cyber.github.io/E-commerce-website/" class="project-link" target="_blank" rel="noreferrer">
+                            View Project
+                        </a>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-meta">
+                            <span>Interactive UI</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Weather App</h3>
+                        <p class="project-desc">
+                            A small app built with DOM updates and live interactions to practice dynamic rendering and
+                            event-driven behavior.
+                        </p>
+                        <a href="#contact" class="project-link">Ask for Demo</a>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-meta">
+                            <span>Productivity</span>
+                            <span>Frontend Practice</span>
+                        </div>
+                        <h3 class="project-title">Todo App</h3>
+                        <p class="project-desc">
+                            A task management project used to improve state handling, structure, and practical user
+                            interactions in the browser.
+                        </p>
+                        <a href="#contact" class="project-link">Ask for Demo</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section contact-section" id="contact">
+                <div class="contact-layout">
+                    <div class="section-heading">
+                        <p class="eyebrow">Contact</p>
+                        <h2 class="section-title">Let's talk about your next website or collaboration idea.</h2>
+                        <p class="contact-copy">
+                            If you want a clean portfolio, landing page, or frontend help, feel free to reach out.
+                        </p>
+                    </div>
+
+                    <div class="contact-cards">
+                        <a href="mailto:ronak.webstudio@gmail.com" class="contact-card" aria-label="Email Ronak Pradhan">
+                            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span class="contact-text">
+                                <strong>Email</strong>
+                                <span>ronak.webstudio@gmail.com</span>
+                            </span>
+                        </a>
+                        <a href="tel:+919775426283" class="contact-card" aria-label="Call Ronak Pradhan">
+                            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span class="contact-text">
+                                <strong>Phone</strong>
+                                <span>+91 97754 26283</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-copy">Designed and built by Ronak Pradhan.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
