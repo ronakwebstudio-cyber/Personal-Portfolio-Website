@@ -15,6 +15,9 @@
                     <img src="./image/logo.png" alt="Ronak Pradhan portfolio logo" >
                 </a>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -32,8 +35,10 @@
                 solving real life problems and building something for the
                 industry.
             </p>
-            <a href="#" class="cta-btn">Hire Me</a>
-            <a href="#" class="cta-btn">Resume</a>
+            <div class="container">
+                <a href="#" class="btn btn-primary">Hire Me</a>
+                <a href="#" class="btn btn-ghost">Resume</a>
+            </div>
         </section>
         <section class="about-section" id="about">
             <h2 class="subtitle">About Me</h2>
@@ -47,19 +52,19 @@
         <section class="skills" id="skills">
             <h2 class="subtitle">Skills</h2>
             <div class="skill-card">
-                <div class="ui-ux-card">
+                <div class="card">
                     <h3 class="sc-st">UI/UX Design</h3>
                     <p class="sc-desc">Designing intuitive and user-friendly interfaces with a focus on simplicity and usability.
                          I aim to create designs that not only look good but also provide a smooth user experience.</p>
                 </div>
-                <div class="html-css-card">
+                <div class="card">
                     <h3 class="sc-st">HTML & CSS</h3>
                     <p class="sc-desc">
                         Building clean, responsive, and structured web interfaces using modern HTML and CSS. Focused on layout design,
                          accessibility, and creating visually appealing user experiences.
                     </p>
                 </div>
-                <div class="coming-soon">
+                <div class="card">
                     <h3 class="sc-st">Coming Soon</h3>
                     <p class="sc-desc">
                         Currently expanding my skill set by learning new technologies and tools.
@@ -113,5 +118,6 @@
     <footer class="footer">
         <span class="footer-copy">&copy; All rights reserved.</span>
     </footer>
-</body>
-</html>
+        <script src="script.js"></script>
+    </body>
+    </html>

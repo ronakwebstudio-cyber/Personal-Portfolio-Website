@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap');
 
 :root {
   /* Backgrounds — layered from darkest to lightest */
@@ -6,7 +6,6 @@
   --cp-bg-deep:    #0a0a12;  /* hero / full-width panels */
   --cp-bg-surface: #0f0f1a;  /* cards, skill chips */
   --cp-bg-raised:  #161625;  /* nav bar, hover, modals */
-  --cp-bg-overlay: #1d1d30;  /* dropdowns, tooltips, code blocks */
 
   /* Neon palette */
   --cp-neon-cyan:    #00f5ff;  /* PRIMARY — links, borders, CTAs */
@@ -18,9 +17,7 @@
   /* Text */
   --cp-text-primary:   #e8eaf6;  /* headings, body copy */
   --cp-text-secondary: #9e9ebf;  /* subheadings, nav links */
-  --cp-text-muted:     #555570;  /* placeholders, timestamps */
-  --cp-text-code:      #00f5ff;  /* inline code, CLI output */
-
+  
   /* Borders (cyan-tinted transparency) */
   --cp-border-dim:    rgba(0, 245, 255, 0.12);  /* idle card outlines */
   --cp-border-mid:    rgba(0, 245, 255, 0.28);  /* focused inputs */
@@ -34,7 +31,6 @@
   /* Typography */
   --cp-font-display: 'Orbitron', 'Courier New', monospace;   /* name, H1 */
   --cp-font-body:    'Share Tech Mono', 'Courier New', monospace; /* paragraphs */
-  --cp-font-code:    'Courier New', monospace;                /* code snippets */
 
   /* Border radii */
   --cp-radius-sharp: 2px;   /* sharp-edged chips, CLI-style boxes */
@@ -62,6 +58,8 @@ body {
     color: #fff;
 }
 
+/* NAVBAR */
+
 header {
     position: sticky;
     top: 0;
@@ -86,7 +84,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 56px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 10px;
     background-color: var(--cp-bg-raised);
 }
@@ -102,21 +100,161 @@ header {
     color: var(--cp-text-secondary);
 }
 
+.nav-links a:hover {
+    color: var(--cp-neon-cyan);
+}
+
+/* HERO SECTION */
+
 .hero-section {
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     max-width: 650px;
-    justify-content: center;
-    margin: 160px;
-    padding: 16px auto;
+    align-items: center;
+    margin: 120px auto;
+    padding: 0 16px;
 }
 
 .hero-name {
     font-family: var(--cp-font-display);
     font-size: 56px;
+    letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
 .hero-desc {
+    color: var(--cp-text-secondary);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
 
+.container {
+    display: flex;
+    gap: var(--cp-space-md);
+    margin-top: var(--cp-space-lg);
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--cp-font-body);
+    font-size: 14px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient( 135deg, var(--cp-neon-cyan), #00c3ff);
+    color: #161625;
+    border: 1px solid var(--cp-border-bright);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--cp-glow-cyan);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--cp-text-primary);
+    border: 1px solid var(--cp-border-dim);
+}
+
+.btn-ghost:hover {
+    transform: translateY(-2px);
+    color: var(--cp-neon-cyan);
+    box-shadow: var(--cp-glow-cyan);
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+    background: var(--cp-bg-surface);
+    border: none;
+    border-radius: 16px;
+    padding: 32px 16px;
+    margin-bottom: 10px;
+    transition: all 0.25s ease;
+}
+
+.subtitle {
+    color: var(--cp-text-primary);
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-me-desc {
+    color: var(--cp-text-secondary);
+}
+
+/* SKILLS SECTION */
+
+.skills {
+    background: var(--cp-bg-surface);
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 16px;
+    padding: 32px 16px;
+}
+
+.skill-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    transition: all 0.25 ease;
+}
+
+.card {
+    background: var(--cp-bg-raised);
+    border: none;
+    border-radius: 16px;
+    padding: 16px 8px;
+    margin: auto;
+}
+
+.card:hover {
+    border: 1px solid var(--cp-border-mid);
+    box-shadow: var(--cp-glow-cyan);
+}
+
+/* Mobile / Responsive tweaks */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--cp-border-dim);
+    color: var(--cp-text-primary);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-bar { padding: 0 12px; }
+    .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+    .nav-links {
+        position: fixed;
+        top: 56px;
+        right: -100%;
+        width: 240px;
+        height: calc(100% - 56px);
+        background: var(--cp-bg-raised);
+        flex-direction: column;
+        gap: 0;
+        padding: 16px;
+        transition: right 0.25s ease;
+        z-index: 200;
+    }
+    .nav-links.open { right: 0; box-shadow: var(--cp-glow-cyan); }
+    .nav-links li { margin: 12px 0; }
+    .nav-links a { font-size: 18px; }
+
+    .hero-section { margin: 80px 16px; max-width: 100%; }
+    .hero-name { font-size: 36px; text-align: center; }
+    .hero-desc { text-align: center; }
+    .container { flex-direction: column; gap: 12px; }
+    .skill-card { grid-template-columns: 1fr; }
+    .project-card { grid-template-columns: 1fr; }
 }
